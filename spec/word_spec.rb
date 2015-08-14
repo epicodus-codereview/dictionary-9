@@ -39,6 +39,15 @@ describe Word do
     end
   end
 
+  describe '.clear' do
+    it 'should empty out the array of saved words' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      word.save
+      Word.clear
+      expect(Word.all).to eq []
+    end
+  end
+
 end
 
 

@@ -15,6 +15,10 @@ class Word
   end
 
   def save
-    @@words.push self 
+    @@words.push self
+  end
+
+  def self.clear
+    @@words = []
   end
 end

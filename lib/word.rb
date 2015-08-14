@@ -1,6 +1,6 @@
 class Word
 
-  attr_reader :name, :origin, :definitions
+  attr_reader :name, :origin, :definitions, :id
 
   @@words = []
 
@@ -8,6 +8,7 @@ class Word
     @name        = attributes.fetch :name
     @origin      = attributes.fetch :origin
     @definitions = []
+    @id          = @@words.length + 1
   end
 
   def self.all

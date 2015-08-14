@@ -48,6 +48,13 @@ describe Word do
     end
   end
 
+  describe '#id' do
+    it 'should return the id of the word' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      expect(word.id).to eq 1
+    end
+  end
+
 end
 
 

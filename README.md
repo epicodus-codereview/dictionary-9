@@ -1,16 +1,25 @@
-#	dictionary
-##	Contributors:
+#	Dictionary
 
-* Tim Kellogg
+##### _The counter weight to Urban dictionary_, _August, 2015_
+
+Currently deployed: _https://mysterious-mesa-5410.herokuapp.com/_
+
+#### By **Tim Kellogg**
+
+## Description 
+
+_Dictionary is the counter weight to urban dictionary.  It uses two classes - Definition and Word in order to generate a dictionary.  You can add new ones very easily by navigating through the site. The site is fully tested using `rspec` for unit testing and `capybara/rspec` for integration testing. It also features a multi-threaded server so it will be able to handle many users at the same time! However, it doesn't store the information to a database so once you leave - it's gone!
+
 ##	Setup
-
 * Download the Repo
 * `cd` into the Directory
-* `ruby app.rb` to start the server
-* `rspec` to test
+* `puma app.rb` to start the server
+* `rspec` to test both integration and libraries
 
 ###	Technologies Used
+* Language: Ruby
 * Stack: Ruby/Sinatra
+* Middleware: Rack
 * Testing: Rspec/Capybara/launchy
 * Server: Puma
 * Gems: listed in Gemfile

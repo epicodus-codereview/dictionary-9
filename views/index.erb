@@ -24,7 +24,7 @@
   <h2>Current Words</h2>
 </div>
   <% @words.each do |word| %>
-    <%= word.name %>
+    <a href="/word/<%= word.id %>"><%= word.name %></a><br>
   <% end %>
 
 <% end %>

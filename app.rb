@@ -11,12 +11,11 @@ post '/word/new' do
 	name   = params.fetch 'name'
 	origin = params.fetch 'origin'
 	@word  = Word.new({ name: name, origin: origin })
-
 	@word.save
 	erb :word
 end
 
 get '/word/:id' do
-	@word = Word.find(params.fetch(id))
+	@word = Word.find(params.fetch('id').to_i)
 	erb :word
 end

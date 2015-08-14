@@ -25,6 +25,12 @@ describe Word do
     end
   end
 
+  describe '.all' do
+    it 'should return be empty by default' do
+      expect(Word.all).to eq []
+    end
+  end
+
 end
 
 

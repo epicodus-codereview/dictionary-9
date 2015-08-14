@@ -4,3 +4,30 @@
 
 <!-- Add definition forum -->
 <!-- redirects back to this page -->
+
+<form class="" action="/definitions" method="post">
+  <div class="form-group">
+    <label for="text">Definition:</label>
+    <textarea class="form-control" name="text" rows="4"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="part_of_speech">Part of Speech</label>
+    <input type="text" name="part_of_speech" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="example">Use it in a sentence</label>
+    <textarea class="form-control" name="text" rows="4"></textarea>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">Add the definition!</button>
+  </div>
+</form>
+<!--
+def initialize (attributes)
+  @text           = attributes.fetch :text
+  @part_of_speech = attributes.fetch :part_of_speech
+  @example        = attributes.fetch :example
+  @id             = @@definitions.length + 1 -->

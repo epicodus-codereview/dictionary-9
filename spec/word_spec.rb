@@ -70,7 +70,17 @@ describe Word do
       word.add_definition definition
       expect(word.definitions).to eq [definition]
     end
+
+    it 'should store multiple definitions in a single word' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      first_definition  = Definition.new({text: 'a unit of language', part_of_speech: 'noun', example: 'The word of the day is bacon.'})
+      second_definition = Definition.new({text: 'a way of saying cool', part_of_speech: 'interjection', example: 'Word.'})
+      word.add_definition first_definition
+      word.add_definition second_definition
+      expect(word.definitions).to eq [first_definition, second_definition]
+    end
   end
+
 
 
 end

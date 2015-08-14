@@ -59,7 +59,16 @@ describe Word do
     it 'should return the word with a matching id' do
       word = Word.new({name: 'word', origin: 'Old English', definitions: []})
       word.save
-      expect(Word.find(1)).to eq word 
+      expect(Word.find(1)).to eq word
+    end
+  end
+
+  describe '#add_definition' do
+    it 'should store a definition in the word\'s array of definitions' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      definition = Definition.new({text: 'a unit of language', part_of_speech: 'noun', example: 'The word of the day is bacon.'})
+      word.add_definition definition
+      expect(Word.add_definition).to eq definition
     end
   end
 

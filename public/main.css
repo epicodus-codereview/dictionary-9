@@ -1,5 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Shadows+Into+Light);
 
+/* General
+***************/
+
+#site-wrapper {
+  background-color: #FFFBD0;
+}
+
+#main-content {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.glyphicon {
+  font-size: 48px;
+  color: black;
+  margin-top: 10px;
+}
+
+
+/* Forms
+***************/
+
+.word-form-container input,
+.word-form-container textarea {
+  margin: auto;
+  text-align: center;
+}
+
 .custom-input {
   width: 30%;
   margin-top: 10px;
@@ -13,15 +41,6 @@ label {
   margin-top: 50px;
 }
 
-#main-content {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-#site-wrapper {
-  background-color: #FFFBD0;
-}
-
 .form-container {
   margin-top: 50px;
 }
@@ -29,6 +48,15 @@ label {
 .form-group {
   padding-bottom: 10px;
 }
+
+.btn {
+  background-color: #9C2A00;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 
 /* Typography
 ************/
@@ -69,26 +97,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.glyphicon {
-  font-size: 48px;
-  color: black;
-  margin-top: 10px;
-}
-
-.btn {
-  background-color: #9C2A00;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
 .index-word {
   font-size: 48px;
-}
-
-.word-form-container input,
-.word-form-container textarea {
-  margin: auto;
-  text-align: center;
 }

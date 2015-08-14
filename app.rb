@@ -8,6 +8,11 @@ get '/' do
 	erb :index
 end
 
+get '/populate_my_dictionary' do
+	populate
+	redirect '/'
+end
+
 post '/word/new' do
 	name   = params.fetch 'name'
 	origin = params.fetch 'origin'
@@ -35,9 +40,4 @@ get '/*' do
 	@message = 'Looks like you mispelled something. But we got your back!'
 	@words   = Word.all
 	erb :index
-end
-
-get '/populate_my_dictionary' do
-	populate
-	redirect '/'
 end

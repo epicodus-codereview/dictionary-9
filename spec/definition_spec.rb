@@ -16,8 +16,16 @@ describe Definition do
       expect(definition.part_of_speech).to eq 'noun'
     end
   end
+
+  describe '#example' do
+    it 'should return the example of the word being used in the definition' do
+      definition = Definition.new({text: 'a unit of language', part_of_speech: 'noun', example: 'The word of the day is bacon.'})
+      expect(definition.example).to eq 'The word of the day is bacon.'
+    end
+  end
 end
 
+# add created at feature
 
 # def initialize (attributes)
 #   @text           = attributes.fetch :text

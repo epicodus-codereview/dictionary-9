@@ -8,6 +8,15 @@ get '/' do
 end
 
 post '/word/new' do
+	name   = params.fetch 'name'
+	origin = params.fetch 'origin'
+	@word  = Word.new({ name: name, origin: origin })
 
-	redirect '/'
+	@word.save
+	erb :word
+end
+
+get '/word/:id' do
+	@word = Word.find(params.fetch(id))
+	erb :word
 end

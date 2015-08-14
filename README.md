@@ -9,7 +9,7 @@ Currently deployed: _https://mysterious-mesa-5410.herokuapp.com/_
 ## Description 
 
 _Dictionary is the counter weight to urban dictionary.  It uses two classes - Definition and Word in order to generate a dictionary.  You can add new ones very easily by navigating through the site. The site is fully tested using `rspec` for unit testing and `capybara/rspec` for integration testing. It also features a multi-threaded server so it will be able to handle many users at the same time! However, it doesn't store the information to a database so once you leave - it's gone!  But,
-if you ever want to repopulate the dictionary, you can run the populate dictionary script. 
+if you ever want to repopulate the dictionary, you can run the populate dictionary script._ 
 
 ##	Setup
 * Download the Repo

@@ -23,6 +23,13 @@ describe Definition do
       expect(definition.example).to eq 'The word of the day is bacon.'
     end
   end
+
+  describe '#id' do
+    it 'should return the id of the definition' do
+      definition = Definition.new({text: 'a unit of language', part_of_speech: 'noun', example: 'The word of the day is bacon.'})
+      expect(definition.id).to eq 1
+    end
+  end
 end
 
 # add created at feature

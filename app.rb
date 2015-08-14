@@ -1,8 +1,10 @@
 require 'sinatra'
 require './lib/word.rb'
 require './lib/definition.rb'
+require './scripts/populate_dictionary.rb'
 
 get '/' do
+	populate
 	@words = Word.all
 	erb :index
 end

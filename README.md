@@ -6,10 +6,10 @@ Currently deployed: _https://mysterious-mesa-5410.herokuapp.com/_
 
 #### By **Tim Kellogg**
 
-## Description 
+## Description
 
 _Dictionary is the counter weight to urban dictionary.  It uses two classes - Definition and Word in order to generate a dictionary.  You can add new ones very easily by navigating through the site. The site is fully tested using `rspec` for unit testing and `capybara/rspec` for integration testing. It also features a multi-threaded server so it will be able to handle many users at the same time! However, it doesn't store the information to a database so once you leave - it's gone!  But,
-if you ever want to repopulate the dictionary, you can run the populate dictionary script._ 
+if you ever want to repopulate the dictionary, you can run the populate dictionary script._
 
 ##	Setup
 * Download the Repo
@@ -20,9 +20,9 @@ if you ever want to repopulate the dictionary, you can run the populate dictiona
 
 ###	Technologies Used
 * Language: Ruby
-* Stack: Ruby/Sinatra, Faker (building a fake database)
+* Stack: Ruby/Sinatra
 * Middleware: Rack
-* Testing: Rspec/Capybara/launchy
+* Testing: Rspec/Capybara/launchy, Faker (building a fake database)
 * Server: Puma
 * Gems: listed in Gemfile
 * Front-End: Bootstrap
@@ -37,4 +37,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-

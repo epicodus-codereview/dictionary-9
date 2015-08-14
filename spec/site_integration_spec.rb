@@ -17,7 +17,7 @@ describe 'when the user views the index page', { :type => :feature } do
   end
 
   context 'when filling out the form with all elements' do
-    it 'should allow the user to create a new word by filling in the form and redict to that page' do
+    it 'should allow the user to create a new word by filling in the form and redirect to that page' do
       fill_in 'Word to Define', with: 'Bacon'
       fill_in 'Origin of Word', with: 'Merica'
       click_button 'Add Word'
@@ -31,6 +31,21 @@ describe 'when the user views the index page', { :type => :feature } do
       click_link 'Home'
       expect(page).to have_content 'Bacon'
     end
+
+    it 'should allow the user to click on the link of the word and move to its page and create a new definition' do
+      click_link 'Bacon'
+      expect(page).to have_content 'Definition'
+    end
+
+    it 'should allow the user to create a new definition for the word' do
+      click_link 'Bacon'
+      fill_in 'text',           with: 'an awesome food'
+      fill_in 'part_of_speech',       with: 'noun'
+      fill_in 'example', with: 'The comedian Jim Gaffigan is obsessed with bacon.'
+      click_button 'Add the definition!'
+      expect(page).to have_content 'an awesome food'
+      expect(page).to have_content 'Jim Gaffigan is obsessed with bacon.'
+    end
   end
 
   # Spec fails probably because it cannot detect the html required tag; functionality still works as expected
@@ -42,4 +57,5 @@ describe 'when the user views the index page', { :type => :feature } do
   #     expect(page).to have_content 'Add Word'
   #   end
   # end
+
 end

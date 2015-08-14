@@ -30,4 +30,10 @@ describe Definition do
       expect(@definition.id).to eq 1
     end
   end
+
+  describe '#created_at' do
+    it 'should return the year that the definition was created' do
+      expect(@definition.created_at).to eq Time.now.year
+    end
+  end
 end

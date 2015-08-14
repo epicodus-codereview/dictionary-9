@@ -8,17 +8,19 @@ Currently deployed: _https://mysterious-mesa-5410.herokuapp.com/_
 
 ## Description 
 
-_Dictionary is the counter weight to urban dictionary.  It uses two classes - Definition and Word in order to generate a dictionary.  You can add new ones very easily by navigating through the site. The site is fully tested using `rspec` for unit testing and `capybara/rspec` for integration testing. It also features a multi-threaded server so it will be able to handle many users at the same time! However, it doesn't store the information to a database so once you leave - it's gone!
+_Dictionary is the counter weight to urban dictionary.  It uses two classes - Definition and Word in order to generate a dictionary.  You can add new ones very easily by navigating through the site. The site is fully tested using `rspec` for unit testing and `capybara/rspec` for integration testing. It also features a multi-threaded server so it will be able to handle many users at the same time! However, it doesn't store the information to a database so once you leave - it's gone!  But,
+if you ever want to repopulate the dictionary, you can run the populate dictionary script. 
 
 ##	Setup
 * Download the Repo
 * `cd` into the Directory
 * `puma app.rb` to start the server
 * `rspec` to test both integration and libraries
+* To populate the dictionary, go to the route "populate{underscore}my{underscore}dictionary"
 
 ###	Technologies Used
 * Language: Ruby
-* Stack: Ruby/Sinatra
+* Stack: Ruby/Sinatra, Faker (building a fake database)
 * Middleware: Rack
 * Testing: Rspec/Capybara/launchy
 * Server: Puma

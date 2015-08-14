@@ -5,6 +5,10 @@
   margin-top: 10px;
 }
 
+label {
+  font-size: 24px;
+}
+
 .btn-container {
   margin-top: 50px;
 }
@@ -34,14 +38,21 @@ h1, h2, h3, p, a {
   color: #9C2A00;
 }
 
-dt {
+h2, dt {
   font-family: 'Shadows into Light', serif;
   font-size: 24px;
   font-weight: bold;
 }
 
+dd {
+  font-size: 20px;
+  font-family: 'Shadows into Light', serif;
+  background-color: white;
+  text-align: left;
+}
+
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Shadows into Light', sans-serif;
   font-weight: 700;
 }
 
@@ -53,8 +64,21 @@ h2 {
   font-size: 72px;
 }
 
+.word-page-header {
+  font-size: 72;
+  margin-bottom: 20px;
+}
+
 .glyphicon {
   font-size: 48px;
   color: black;
   margin-top: 10px;
+}
+
+.btn {
+  background-color: #9C2A00;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }

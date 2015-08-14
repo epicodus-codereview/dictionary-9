@@ -1,37 +1,46 @@
 <div class="row text-center">
-  <h2><%= @word.name %></h2>
+  <h2 class="word-page-header"><%= @word.name %></h2>
 </div>
 
 <% if @word.definitions %>
   <div class="container text-center">
-    <ul>
-      <% @word.definitions.each do |definition| %>
-        <li><%= definition.text %>, (<%= definition.part_of_speech %>). <em><%= definition.example %></em></li>
-      <% end %>
-    </ul>
+    <% @word.definitions.each_with_index do |definition, index| %>
+      <dl class="dl-horizontal">
+        <dt>Definition <%= index + 1 %>:</dt>
+          <dd><%= definition.text %></dd>
+        <dt>Part of Speech:</dt>
+          <dd><%= definition.part_of_speech %></dd>
+        <dt>Example:</dt>
+          <dd><%= definition.example %></dd>
+        <dt>Added on:</dt>
+          <dd><%= definition.created_at %></dd>
+      </dl>
+    <% end %>
   </div>
 <% end %>
 
 <!-- feature: addjquery to hide form adding with button click -->
-<form action="/definition" method="post">
-  <input id='id' name='id' type='hidden' value='<%= @word.id() %>'>
+<div class="form-container">
+  <form action="/definition" class="text-center" method="post">
+    <input id='id' name='id' type='hidden' value='<%= @word.id() %>'>
 
-  <div class="form-group">
-    <label for="text">Definition:</label>
-    <textarea id="text" required class="form-control" name="text" rows="4"></textarea>
-  </div>
+    <div class="form-group">
+      <label for="text">Definition:</label>
+      <textarea id="text" required class="form-control custom-input input-lg" name="text" rows="4"></textarea>
+    </div>
 
-  <div class="form-group">
-    <label for="part_of_speech">Part of Speech</label>
-    <input type="text" required id="part_of_speech" name="part_of_speech" class="form-control">
-  </div>
+    <div class="form-group">
+      <label for="part_of_speech">Part of Speech</label>
+      <input type="text" required id="part_of_speech" name="part_of_speech" class="form-control custom-input input-lg">
+    </div>
 
-  <div class="form-group">
-    <label for="example">Use it in a sentence</label>
-    <textarea class="form-control" required id="example" name="example" rows="4"></textarea>
-  </div>
+    <div class="form-group">
+      <label for="example">Use it in a sentence</label>
+      <textarea class="form-control custom-input input-lg" required id="example" name="example" rows="4"></textarea>
+    </div>
 
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary">Add the definition!</button>
-  </div>
-</form>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Add the definition!</button>
+    </div>
+  </form>
+</div>

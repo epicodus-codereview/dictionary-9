@@ -1,6 +1,7 @@
 #	dictionary
 ##	Contributors:
-* TimKellogg
+
+* Tim Kellogg
 ##	Setup
 
 * Download the Repo
@@ -9,9 +10,14 @@
 * `rspec` to test
 
 ###	Technologies Used
- (Add information here)
+* Stack: Ruby/Sinatra
+* Testing: Rspec/Capybara/launchy
+* Server: Puma
+* Gems: listed in Gemfile
+* Front-End: Bootstrap
+
 ###	Legal
-Copyright (c) 2015 **_{List of contribtors}_**
+Copyright (c) 2015 **Tim Kellogg_**
 
 This software is licensed under the MIT license.
 

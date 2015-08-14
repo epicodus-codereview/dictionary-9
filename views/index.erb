@@ -2,6 +2,12 @@
   <h1 id="main-title">Rural Dictionary</h1>
 </div>
 
+<% if @message %>
+  <div class="row text-center">
+    <p class="lead"><%= @message %></p>
+  </div>
+<% end %>
+
 <hr>
 <div class="form-container">
   <form class="form-inline text-center" action="/word/new" method="post">

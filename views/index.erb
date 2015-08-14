@@ -7,12 +7,12 @@
   <form class="form-inline text-left" action="/word/new" method="post">
     <div class="form-group">
       <label for="name">Word to Define: </label>
-      <input type="text" name="name" class="form-control custom-input" id="name" placeholder="Ex: 'word'">
+      <input type="text" name="name" required class="form-control custom-input" id="name" placeholder="Ex: 'word'">
     </div>
 
     <div class="form-group">
       <label for="origin">Origin of Word: </label>
-      <input type="origin" name="origin" class="form-control custom-input" id="origin" placeholder="Ex: 'old english'">
+      <input type="origin" name="origin" required class="form-control custom-input" id="origin" placeholder="Ex: 'old english'">
     </div>
     <button type="submit" class="btn btn-primary">Add Word</button>
   </form>

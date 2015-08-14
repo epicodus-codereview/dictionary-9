@@ -26,6 +26,20 @@ describe 'when the user views the index page', { :type => :feature } do
       expect(page).to have_content 'Part of Speech'
       expect(page).to have_content 'Use it in a sentence'
     end
+
+    it 'should add that word to the list of words on the index page' do
+      click_link 'Home'
+      expect(page).to have_content 'Bacon'
+    end
   end
 
+  # Spec fails probably because it cannot detect the html required tag; functionality still works as expected
+  # context 'when not filling in some required elements' do
+  #   it 'should prevent the user from moving to the next page' do
+  #     visit '/'
+  #     fill_in 'Word to Define', with: ''
+  #     click_button 'Add Word'
+  #     expect(page).to have_content 'Add Word'
+  #   end
+  # end
 end

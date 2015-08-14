@@ -2,10 +2,20 @@
   <%= @word.name %>
 </div>
 
-<!-- Add definition forum -->
-<!-- redirects back to this page -->
+<% if @word.definitions %>
+  <div class="container text-center">
+    <ul>
+      <% @word.definitions.each do |definition| %>
+        <li><%= definition.text %>, (<%= definition.part_of_speech %>). <em><%= definition.example %></em></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 
-<form class="" action="/definitions" method="post">
+<!-- feature: addjquery to hide form adding with button click -->
+<form action="/definition" method="post">
+  <input id='id' name='id' type='hidden' value='<%= @word.id() %>'>
+
   <div class="form-group">
     <label for="text">Definition:</label>
     <textarea class="form-control" name="text" rows="4"></textarea>
@@ -18,16 +28,10 @@
 
   <div class="form-group">
     <label for="example">Use it in a sentence</label>
-    <textarea class="form-control" name="text" rows="4"></textarea>
+    <textarea class="form-control" name="example" rows="4"></textarea>
   </div>
 
   <div class="text-center">
     <button type="submit" class="btn btn-primary">Add the definition!</button>
   </div>
 </form>
-<!--
-def initialize (attributes)
-  @text           = attributes.fetch :text
-  @part_of_speech = attributes.fetch :part_of_speech
-  @example        = attributes.fetch :example
-  @id             = @@definitions.length + 1 -->

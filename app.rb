@@ -19,3 +19,12 @@ get '/word/:id' do
 	@word = Word.find(params.fetch('id').to_i)
 	erb :word
 end
+
+post '/definition' do
+	@word          = Word.find(params.fetch('id').to_i)
+	text           = params.fetch 'text'
+	part_of_speech = params.fetch 'part_of_speech'
+	example        = params.fetch 'example'
+	@definition    = Definition.new({ text: text, part_of_speech: part_of_speech, example: example})
+	erb :word
+end

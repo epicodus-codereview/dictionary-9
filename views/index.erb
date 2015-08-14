@@ -2,8 +2,9 @@
   <h1>Dictionary</h1>
 </div>
 
+<hr>
 <div class="form-container">
-  <form class="form-inline text-center" action="/word/new" method="post">
+  <form class="form-inline text-left" action="/word/new" method="post">
     <div class="form-group">
       <label for="name">Word to Define: </label>
       <input type="text" class="form-control custom-input" id="name" placeholder="Ex: 'word'">
@@ -16,3 +17,14 @@
     <button type="submit" class="btn btn-primary">Add Word</button>
   </form>
 </div>
+<hr>
+
+<% if @words.any? %>
+<div class="row text-left">
+  <h2>Current Words</h2>
+</div>
+  <% @words.each do |word| %>
+
+  <% end %>
+
+<% end %>

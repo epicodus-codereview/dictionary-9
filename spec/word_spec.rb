@@ -4,13 +4,8 @@ require 'word'
 
 describe Word do
 
-  after do
-    Word.clear
-  end
-
-  before do
-    @word = Word.new({name: 'word', origin: 'Old English', definitions: []})
-  end
+  after { Word.clear }
+  before { @word = Word.new({name: 'word', origin: 'Old English', definitions: []}) }
 
   describe '#name' do
     it 'should return the name of the word' do

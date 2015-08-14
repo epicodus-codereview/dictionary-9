@@ -3,4 +3,6 @@
 # Definition
 
 # Word
- @definitions
+ # part of speach
+ # name
+ # definitions

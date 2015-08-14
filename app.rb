@@ -26,5 +26,6 @@ post '/definition' do
 	part_of_speech = params.fetch 'part_of_speech'
 	example        = params.fetch 'example'
 	@definition    = Definition.new({ text: text, part_of_speech: part_of_speech, example: example})
+	@word.add_definition @definition 
 	erb :word
 end

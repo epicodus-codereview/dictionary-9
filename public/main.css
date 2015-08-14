@@ -29,12 +29,14 @@
 }
 
 .custom-input {
-  width: 30%;
+  width: 50%;
   margin-top: 10px;
 }
 
 label {
   font-size: 24px;
+  font-family: 'Shadows into Light';
+  font-weight: 700;
 }
 
 .btn-container {
@@ -51,6 +53,8 @@ label {
 
 .btn {
   background-color: #9C2A00;
+  margin-bottom: 20px;
+  width: 32%;
 }
 
 .btn:hover {
@@ -99,4 +103,23 @@ h2 {
 
 .index-word {
   font-size: 48px;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  h1, h3, p {
+    text-align: center;
+  }
+
+  input {
+    margin: auto;
+  }
+
+  .custom-input {
+    width: 100%;
+  }
+
 }

@@ -20,7 +20,11 @@
 <% end %>
 
 <div class="row text-center">
-  <h2>Know another definition for this word?</h2>
+  <% if @word.definitions.count == 0 || @word.definitions.count.nil? %>
+    <h2>Know a definition for <%= @word.name %>?</h2>
+  <% else %>
+    <h2>Know another definition for <%= @word.name %>?</h2>
+  <% end %>
 </div>
 
 <div class="form-container word-form-container">
@@ -43,7 +47,7 @@
     </div>
 
     <div class="text-center">
-      <button type="submit" class="btn btn-primary">Add the definition!</button>
+      <button type="submit" class="btn btn-primary btn-lg">Add the definition!</button>
     </div>
   </form>
 </div>

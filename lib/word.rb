@@ -34,6 +34,6 @@ class Word
   end
 
   def add_definition (definition)
-    @@definitions.push definition 
+    @definitions.push definition
   end
 end

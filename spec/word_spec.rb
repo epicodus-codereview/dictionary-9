@@ -68,9 +68,10 @@ describe Word do
       word = Word.new({name: 'word', origin: 'Old English', definitions: []})
       definition = Definition.new({text: 'a unit of language', part_of_speech: 'noun', example: 'The word of the day is bacon.'})
       word.add_definition definition
-      expect(Word.add_definition).to eq definition
+      expect(word.definitions).to eq [definition]
     end
   end
+
 
 end
 

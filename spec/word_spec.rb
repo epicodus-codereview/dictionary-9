@@ -80,18 +80,4 @@ describe Word do
       expect(word.definitions).to eq [first_definition, second_definition]
     end
   end
-
-
-
 end
-
-
-
-# Definition
-  # part of speech
-  # example sentence
-
-# Word
- # name
- # definitions
- # origin

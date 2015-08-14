@@ -10,14 +10,4 @@ class Definition
     @example        = attributes.fetch :example
     @id             = @@definitions.length + 1
   end
-
 end
-
-
-
-# Definition
-
-# Word
- # part of speach
- # name
- # definitions

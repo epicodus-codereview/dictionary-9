@@ -1,5 +1,9 @@
-require('sinatra')
+require 'sinatra'
+require 'sinatra/contrib'
+require './lib/word.rb'
+require './lib/definition.rb'
 
-get('/') do
-	erb(:index)
+get '/' do
+	@words = Word.all
+	erb :index
 end

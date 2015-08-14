@@ -31,11 +31,3 @@ describe Definition do
     end
   end
 end
-
-# add created at feature
-
-# def initialize (attributes)
-#   @text           = attributes.fetch :text
-#   @part_of_speech = nil
-#   @example        = nil
-# end

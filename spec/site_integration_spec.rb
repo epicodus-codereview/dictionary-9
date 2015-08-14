@@ -27,11 +27,6 @@ describe 'when the user views the index page', { :type => :feature } do
       expect(page).to have_content 'Use it in a sentence'
     end
 
-    it 'should add that word to the list of words on the index page' do
-      click_link 'Home'
-      expect(page).to have_content 'Bacon'
-    end
-
     it 'should allow the user to click on the link of the word and move to its page and create a new definition' do
       click_link 'Bacon'
       expect(page).to have_content 'Definition'

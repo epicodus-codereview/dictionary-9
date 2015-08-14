@@ -1,5 +1,5 @@
 <div class="row text-center">
-  <h1>Dictionary</h1>
+  <h1 id="main-title">Dictionary</h1>
 </div>
 
 <hr>
@@ -20,11 +20,17 @@
 <hr>
 
 <% if @words %>
-<div class="row text-center">
-  <h2>Current Words</h2>
-</div>
-  <% @words.each do |word| %>
-    <a href="/word/<%= word.id %>"><%= word.name %></a><br>
-  <% end %>
+  <div class="row text-center">
+    <h2>Current Words</h2>
+  </div>
 
+  <dl class="dl-horizontal">
+    <% @words.each do |word| %>
+      <dt><a href="/word/<%= word.id %>"><%= word.name %></a></dt>
+      <% word.definitions.each do |definition| %>
+        <dd><%= definition.text %></dd>
+        <dd><%= definition.part_of_speech %></dd>
+      <% end %>
+    <% end %>
+  </dl>
 <% end %>

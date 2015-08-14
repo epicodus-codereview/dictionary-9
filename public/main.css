@@ -14,3 +14,21 @@
 .form-container {
   margin-top: 50px;
 }
+
+/* Typography
+************/
+
+h1, h2, h3, p {
+  letter-spacing: 1px;
+}
+
+#main-title {
+  font-size: 72px;
+}
+
+
+.glyphicon {
+  font-size: 24px;
+  color: black;
+  margin-top: 10px;
+}

@@ -55,6 +55,14 @@ describe Word do
     end
   end
 
+  describe '.find' do
+    it 'should return the word with a matching id' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      word.save
+      expect(Word.find(1)).to eq word 
+    end
+  end
+
 end
 
 

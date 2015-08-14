@@ -4,7 +4,7 @@ class Word
 
   @@words = []
 
-  define_method(:initialize) do |attributes|
+  def initialize (attributes)
     @name        = attributes.fetch :name
     @origin      = attributes.fetch :origin
     @definitions = []

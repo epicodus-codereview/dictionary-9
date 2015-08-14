@@ -39,7 +39,7 @@ describe 'when the user views the index page', { :type => :feature } do
       fill_in 'example', with: 'The comedian Jim Gaffigan is obsessed with bacon.'
       click_button 'Add the definition!'
       expect(page).to have_content 'an awesome food'
-      expect(page).to have_content 'Jim Gaffigan is obsessed with bacon.'
+      expect(page).to have_content 'The comedian Jim Gaffigan is obsessed with bacon.'
     end
   end
 

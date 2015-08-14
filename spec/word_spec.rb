@@ -31,6 +31,14 @@ describe Word do
     end
   end
 
+  describe '#save' do
+    it 'should store the word to the array of saved words' do
+      word = Word.new({name: 'word', origin: 'Old English', definitions: []})
+      word.save
+      expect(Word.all).to eq [word]
+    end
+  end
+
 end
 
 

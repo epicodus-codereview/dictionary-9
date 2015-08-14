@@ -13,4 +13,8 @@ class Word
   def self.all
     @@words
   end
+
+  def save
+    @@words.push self 
+  end
 end

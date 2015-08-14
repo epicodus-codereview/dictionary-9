@@ -13,30 +13,34 @@
   <form class="form-inline text-center" action="/word/new" method="post">
     <div class="form-group">
       <label for="name">Word to Define: </label>
-      <input type="text" name="name" required class="form-control custom-input" id="name" placeholder="Ex: 'word'">
+      <input type="text" name="name" required class="form-control input-lg custom-input" id="name" placeholder="Ex: 'word'">
     </div><br>
 
     <div class="form-group">
       <label for="origin">Origin of Word: </label>
-      <input type="origin" name="origin" required class="form-control custom-input" id="origin" placeholder="Ex: 'old english'">
+      <input type="origin" name="origin" required class="form-control input-lg custom-input" id="origin" placeholder="Ex: 'old english'">
     </div><br>
     <button type="submit" class="btn btn-primary custom-input">Add Word</button>
   </form>
 </div>
 <hr>
 
+
+
 <% if @words %>
   <div class="row text-center">
     <h2>Current Words</h2>
   </div>
 
-  <dl class="dl-horizontal">
+  <div class="container text-center">
     <% @words.each do |word| %>
-      <dt><a href="/word/<%= word.id %>"><%= word.name %>&colon;</a></dt>
-      <% word.definitions.each do |definition| %>
-        <dd><%= definition.text %></dd>
-        <dd>(<%= definition.part_of_speech %>)</dd>
-      <% end %>
+      <dl class="dl-horizontal">
+        <dt><span class="index-word"><a href="/word/<%= word.id %>"><%= word.name %>&colon;</a></span></dt>
+        <% word.definitions.each do |definition| %>
+          <dd><%= definition.text %></dd>
+          <dd>(<%= definition.part_of_speech %>)</dd>
+        <% end %>
+      </dl>
     <% end %>
-  </dl>
+  </div>
 <% end %>

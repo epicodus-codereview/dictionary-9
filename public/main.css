@@ -82,3 +82,7 @@ h2 {
 .btn:hover {
   transform: scale(1.1);
 }
+
+.index-word {
+  font-size: 48px;
+}

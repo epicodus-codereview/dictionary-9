@@ -86,3 +86,9 @@ h2 {
 .index-word {
   font-size: 48px;
 }
+
+.word-form-container input,
+.word-form-container textarea {
+  margin: auto;
+  text-align: center;
+}

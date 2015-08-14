@@ -19,8 +19,11 @@
   </div>
 <% end %>
 
-<!-- feature: addjquery to hide form adding with button click -->
-<div class="form-container">
+<div class="row text-center">
+  <h2>Know another definition for this word?</h2>
+</div>
+
+<div class="form-container word-form-container">
   <form action="/definition" class="text-center" method="post">
     <input id='id' name='id' type='hidden' value='<%= @word.id() %>'>
 

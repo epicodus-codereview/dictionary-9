@@ -3,11 +3,6 @@ require './lib/word.rb'
 require './lib/definition.rb'
 require './scripts/populate_dictionary.rb'
 
-get '/populate_my_dictionary' do
-	populate
-	redirect '/'
-end
-
 get '/' do
 	@words = Word.all
 	erb :index
@@ -40,4 +35,9 @@ get '/*' do
 	@message = 'Looks like you mispelled something. But we got your back!'
 	@words   = Word.all
 	erb :index
+end
+
+get '/populate_my_dictionary' do
+	populate
+	redirect '/'
 end

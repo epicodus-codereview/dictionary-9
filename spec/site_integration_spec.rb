@@ -52,5 +52,13 @@ describe 'when the user views the index page', { :type => :feature } do
   #     expect(page).to have_content 'Add Word'
   #   end
   # end
+end
 
+
+describe 'when the user types in the wrong address for the url', { :type => :feature } do
+  it 'should send them to the index and display a friendly message' do
+    visit '/bobisyouruncle'
+    expect(page).to have_content 'Dictionary'
+    expect(page).to have_content 'got your back!'
+  end
 end

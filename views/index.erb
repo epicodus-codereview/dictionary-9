@@ -1,20 +1,20 @@
 <div class="row text-center">
-  <h1 id="main-title">Dictionary</h1>
+  <h1 id="main-title">Rural Dictionary</h1>
 </div>
 
 <hr>
 <div class="form-container">
-  <form class="form-inline text-left" action="/word/new" method="post">
+  <form class="form-inline text-center" action="/word/new" method="post">
     <div class="form-group">
       <label for="name">Word to Define: </label>
       <input type="text" name="name" required class="form-control custom-input" id="name" placeholder="Ex: 'word'">
-    </div>
+    </div><br>
 
     <div class="form-group">
       <label for="origin">Origin of Word: </label>
       <input type="origin" name="origin" required class="form-control custom-input" id="origin" placeholder="Ex: 'old english'">
-    </div>
-    <button type="submit" class="btn btn-primary">Add Word</button>
+    </div><br>
+    <button type="submit" class="btn btn-primary custom-input">Add Word</button>
   </form>
 </div>
 <hr>
@@ -26,10 +26,10 @@
 
   <dl class="dl-horizontal">
     <% @words.each do |word| %>
-      <dt><a href="/word/<%= word.id %>"><%= word.name %></a></dt>
+      <dt><a href="/word/<%= word.id %>"><%= word.name %>&colon;</a></dt>
       <% word.definitions.each do |definition| %>
         <dd><%= definition.text %></dd>
-        <dd><%= definition.part_of_speech %></dd>
+        <dd>(<%= definition.part_of_speech %>)</dd>
       <% end %>
     <% end %>
   </dl>

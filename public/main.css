@@ -1,5 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Shadows+Into+Light);
+
 .custom-input {
-  width: 80%;
+  width: 30%;
+  margin-top: 10px;
 }
 
 .btn-container {
@@ -11,24 +14,47 @@
   margin-bottom: 25px;
 }
 
+#site-wrapper {
+  background-color: #FFFBD0;
+}
+
 .form-container {
   margin-top: 50px;
+}
+
+.form-group {
+  padding-bottom: 10px;
 }
 
 /* Typography
 ************/
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
   letter-spacing: 1px;
+  color: #9C2A00;
+}
+
+dt {
+  font-family: 'Shadows into Light', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 48px;
 }
 
 #main-title {
   font-size: 72px;
 }
 
-
 .glyphicon {
-  font-size: 24px;
+  font-size: 48px;
   color: black;
   margin-top: 10px;
 }

@@ -4,6 +4,10 @@ require 'word'
 
 describe Word do
 
+  before do
+    Word.clear
+  end
+
   describe '#name' do
     it 'should return the name of the word' do
       word = Word.new({name: 'word', origin: 'Old English', definitions: []})
